@@ -25,12 +25,49 @@
 
     </nav>
     <header class="header">
-
       <h1>Panificados ViLu</h1>
     </header>
+
     <form class="form-contacto" action="">
+      <fieldset>
+        <legend>Tus datos de contacto: </legend>
 
+        <input type="text" name="name" placeholder="Nombre" required>
 
+        <input type="text" name="lastname" placeholder="Apellido" required> <br>
+        <label for="phone">Teléfono: </label>
+        <input type="tel" name="phone" placeholder="0261-1234567" required>
+
+        <label for="compa">Selecciona tu compañía: </label>
+
+        <select id="compania">
+          <option value="Movistar" selected>Movistar</option>
+          <option value="Personal">Personal</option>
+          <option value="Claro">Claro</option>
+          <option value="Tuenti">Tuenti</option>
+
+        </select>
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" placeholder="ejemplo@mail.com">
+      </fieldset>
+
+      <fieldset>
+        <legend>Tu comentario e imagen: </legend>
+        <label for="coment">Agrega tu comentario: </label>
+        <textarea placeholder="Escribe aquí..."></textarea>
+        <br>
+        <label for="file">Agrega tu imagen de ejemplo aquí: </label>
+
+        <input type="file" name="imagenEjemplo">
+        <small style="color: brown; font-weight:bold;">Archivo .jpg o .png </small>
+
+        <br>
+      </fieldset>
+      <div class="botones">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+      </div>
     </form>
 
     <footer class="footer">

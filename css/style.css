@@ -13,7 +13,6 @@ body {
 }
 /************************************/
 /*     Estilos media queries        */
-
 /************************************/
 /* Estilos responsive para página */
 /*      Productos y Servicios     */
@@ -146,6 +145,7 @@ h3{
     color: black;
     
 }
+
 /**********************/ 
 /* grid pagina inicio */
 /**********************/
@@ -277,19 +277,71 @@ main>p::first-letter{
 /*grid pagina contacto*/
 /**********************/
 .container-contacto{
+    display: grid;
+    grid-template-areas: "nav nav"
+                        "header header"
+                        "form form"
+                        "footer footer";
+    grid-template-rows: repeat(4, auto);
 
 }
+nav.navbar{
+    grid-area: nav;
+}
+header.header{
+    grid-area: header;
+}
+form.form-contacto{
+    grid-area: form;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-left: 20%;
+    font-weight: bold;
+    color: #333;
+    
+    
+}
+fieldset{
+    width: 70%;
+    margin-bottom: 5em;
+    
+}
 
-/*gid pagina de establecimientos*/
+legend{
+    font-weight: bolder ;
+}
 
+label{
+    display: inline-block;
+    margin: 1em;
+}
+input, select{
+    height: 2.5em;
+    width: 10em;
+}
 
+textarea{
+    width: 20em;
+    height: 10em;
+}
+.botones{
+    display: inline-flex;
+    justify-self: center;
+    
+    margin: 0 1vh;
+    margin-bottom: 1em;
+    
+}
 
-.footer{
+/*footer de los grid*/
+footer.footer{
     grid-area: footer;
     display: flex;
     background-color: rgb(24, 23, 23);
     color: white;
     position: sticky;
+    margin-bottom: 0;
     bottom: 0;
     justify-content: center;
     align-items: center;
@@ -318,9 +370,6 @@ li{
 }
         
     
-
-
-
 
 /*estilo seccion usuarios en nav*/
 .fa-user,.fa-user-plus{
