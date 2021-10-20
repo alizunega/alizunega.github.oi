@@ -19,75 +19,14 @@ body {
 /************************************/
 
 @media screen and (max-width:600px) {
-    
-    footer{
-        height: 1vh;
-        font-size: 1.2vh;
-               
-    }
-    footer>ul.list-group{
-        font-size: 100%;
-    }
-    
-    
-    .header{
-        padding: 0.5rem;
-        margin: 0.5rem;
-        background-color: whitesmoke;
-    }
-
-   
-
-    .main{
-        font-size: 80%;
-        height: auto;
-        margin: 0.5em 1em;
-        padding: 0.5em;
-        max-height: max-content;
-    }
+  
 
         
 }
 /* Segundo Punto de quiebre */
 @media screen and (max-width:788px) {
-    .nav.navbar{
-        display: flex;
-        background-color: tomato;
-    }
-    footer{
-        
-        width: 100%;
-        height: auto;
-        font-size: auto;
-               
-    }
-    footer>ul.list-group{
-        font-size: 100%;
-        
-    }
-    .grid-container{
-        display: flex;
-        flex-direction: column;
-        
-    }
     
-    
-    
-    .row,
-    .navbar {
-        flex-direction: column;
-        height: 1vh;
-    }
 
-    .navbar a {
-        font-size: 80%;
-        height: 80%;
-    }
-    img{
-        display: inline-block;
-        width: 100%;
-    }
-    
 }
 /************************************/
 /*     Estilo por defecto           */
@@ -111,12 +50,12 @@ h3{
 /*barras de navegacion*/
 .navbar {
     display: flex;
-    background-color: #333;
+    background-color:#333;
     color: grey;
     text-align: center;
     position: fixed;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
 }
 
@@ -132,17 +71,18 @@ h3{
 .navbar a{
     color: white;
     text-decoration: none;
+    align-self: center;
     padding: 0.5em;
     margin: 0;
-    align-content: space-between;
-    
+          
 }
 
 
 /*estilo mouseover*/
 .navbar>a:hover, .nav-link:hover {
     background-color: rgba(241, 224, 224, 0.178);
-    color: black;
+    color:white;
+    font-weight: bold;
     
 }
 
@@ -163,16 +103,16 @@ h3{
 
     grid-auto-flow: row;    
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: repeat(5, auto);
                    
 
 }
 
-.navbar{
+nav.navbar{
     grid-area: nav;
     
 }
-.header{
+header.header{
     grid-area: header;
     justify-self: center;
     align-self: center;
@@ -180,28 +120,29 @@ h3{
 
 main.item1{
     grid-area: item1;
-    margin-left: 10%;
+    
+    
 }
+
 main.item2{
     grid-area: item2;
     text-align: justify;
     align-self: center;
-    margin-left: 10%;
     text-decoration-style: solid;
     color: #000;
-    text-decoration-thickness: 15vh;
+    
 }
 
 
 /* Imagenes del grid inicio*/
-img.imagen-grid{
-    width:  15%;
+.imagen-grid{
+    width: 100%;
     opacity: 25%;
 }
 
-/***********************************/
-/*grid pagina productos y servicios*/
-/***********************************/
+/*******************************/
+/* pagina productos y servicios*/
+/*******************************/
 div.container-productos {
     display: grid;
     grid-template-areas: "nav nav"
@@ -228,6 +169,7 @@ header.header{
 }
 main.grid-item1{
     grid-area: grid-item1;
+    
    
 }
 main.grid-item2{
@@ -246,16 +188,14 @@ main.grid-item5{
     display: inline;
         
 }
-main{
-    margin: auto 10em;
-    justify-content: center;
-}
-
 .image-grid img{
-    height: 40%;
-    width: 60%;
-    padding-bottom: 0.5em;
-    
+    width: 70%;
+    margin-left: 2em;
+    justify-self: center;
+}
+main{
+    margin: auto auto;
+    justify-content: center;
 }
 
 main li{
@@ -265,17 +205,18 @@ main li{
 main > p{
     justify-content: left;
     margin-right: 2em;
-    font-style: oblique;
+    color:#333;
 }
 main>p::first-letter{
     margin-left: 1em;
     font-weight: bolder;
+    
 }
 
 
-/**********************/
-/*grid pagina contacto*/
-/**********************/
+/*****************/
+/*pagina contacto*/
+/*****************/
 .container-contacto{
     display: grid;
     grid-template-areas: "nav nav"
@@ -297,7 +238,7 @@ form.form-contacto{
     align-items: center;
     display: block;
     margin-left: 20%;
-    font-weight: bold;
+    font-weight: 500;
     color: #333;
     
     
@@ -309,12 +250,12 @@ fieldset{
 }
 
 legend{
-    font-weight: bolder ;
+    font-weight: 600 ;
 }
 
 label{
     display: inline-block;
-    margin: 1em;
+    margin: 0.5em;
 }
 input, select{
     height: 2.5em;
@@ -338,27 +279,25 @@ textarea{
 footer.footer{
     grid-area: footer;
     display: flex;
-    background-color: rgb(24, 23, 23);
-    color: white;
-    position: sticky;
-    margin-bottom: 0;
+    background-color:black;
+    color: grey;
+    position: fixed;
     bottom: 0;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
     
-
-
 }
 
 .footer > a{
     padding: 0.5em;
 }
-  
-  
-        
+footer > a:hover{
+    background-color: rgb(214, 205, 205);
 
+} 
+  
 li>a{
     color:white;
     text-decoration: none;
@@ -371,23 +310,19 @@ li{
         
     
 
-/*estilo seccion usuarios en nav*/
+/* ingreso y registro en nav */
 .fa-user,.fa-user-plus{
     color: gray;
     padding: 0.5em;
     margin: 0.1em 0.5em;
     font-size: 0.8em;
 }
-#usuarios{
-    float: right;
-       
-}
 
-/*pie de paginas de toda la web*/
 
+/*****iconos de footer*******/
 
 .fa-instagram-square{
-    color:rgb(155, 48, 197);
+    color:rgb(150, 69, 182);
     font-size: 0.8em;
     margin: auto auto;
 }
@@ -398,25 +333,23 @@ li{
     margin: auto auto;
 }
 
-footer > a:hover{
-    background-color: grey;
-
-}
 
 
-/*estilos pagina establecimientos*/
-/*contenedor mapa y medios de comunicacion*/
+/*************************/
+/*pagina establecimientos*/
+/*************************/
 
 div.container-map{
     display: grid;
     grid-template-areas: "nav nav"
                         "header header"
-                        "item1 item1"
-                        "item2 item2"
+                        "item1-estable item1-estable"
+                        "item2-estable item2-estable"
                         "footer footer";
-    grid-auto-flow: rows;   
+    grid-auto-flow: column;   
     grid-template-rows: repeat(5, auto);
     grid-gap: 1em;
+    height: 100%;
 
 
 }
@@ -426,14 +359,15 @@ nav.navbar{
 header.header{
     grid-area: header;
 }
-main.item1{
-    grid-area: item1;
-    margin-left: 10em;
-
+main.item1-estable{
+    grid-area: item1-estable;
+    
 }
-main.item2{
-    grid-area: item2;
-    align-self: center;
+main.item2-estable{
+    grid-area: item2-estable;
+    height: 100%;
+    width: auto;
+    align-self: left;
 }
 
 iframe{
@@ -445,20 +379,49 @@ iframe{
 .fa-at{
     color: rgb(101, 24, 243);
     font-size: 1.5em;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
 }
 /*icono whatsapp*/
 .fa-whatsapp-square{
-    
     color: rgb(59, 146, 59);
     font-size: 1.5em;
+    
 }
 /*contacto telef y mail*/
 .fa-map-marked-alt{
-    color:rgb(24, 23, 23);
-    font-size: 1.5vw;
+    color: blueviolet;
+    font-size: 2vw;
+    margin: 0.5em;
+    
 }
 .container-map{
     display: flex;
     height: auto;
     width: auto;
 }
+
+/********************/
+/*Efectos transicion*/
+/********************/
+.fa-user, .fa-user-plus {
+    transition:  font-size 0.2s, color 0.2s;
+    transition-timing-function: ease-out;
+    
+  }
+  
+ .fa-user:hover,.fa-user-plus:hover{
+    color: white;
+    background-color: rgb(91, 63, 168);
+    font-size: 0.8em;
+    padding: 0.8em;
+    border: solid;
+  }
+
+  /*animacion*/
+     
+  @keyframes example {
+    from {transform: rotate(-90deg); font-size: 1em;}
+    to {transform: rotate(360deg)}
+  }

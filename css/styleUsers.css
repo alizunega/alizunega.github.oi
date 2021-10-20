@@ -1,0 +1,25 @@
+/************************************/
+/*pagina de estilos para formularios*/
+/*     de ingreso y registro        */ 
+/************************************/
+
+
+* {
+    /* estilo para toda la pagina */
+    box-sizing: border-box;
+
+}       
+
+/* estilo general del body*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+form{
+    
+    margin-left: 10vh;
+    width: 50%;
+}
