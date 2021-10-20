@@ -19,7 +19,21 @@ body {
 /************************************/
 
 @media screen and (max-width:600px) {
-  
+.navbar{
+    width: 50%;
+    height: 3em;
+    font-size: 0.8em;
+    justify-content: left;
+}
+header.header{
+    font-size: 0.8em;
+    
+}
+.imagen-grid{
+    width: 80%;
+    margin: auto;
+    opacity: 25%;
+}  
 
         
 }
@@ -188,10 +202,10 @@ main.grid-item5{
     display: inline;
         
 }
-.image-grid img{
+.image-grid > img{
     width: 70%;
-    margin-left: 2em;
-    justify-self: center;
+    margin: auto;
+    padding-right: 2em ;
 }
 main{
     margin: auto auto;
@@ -374,6 +388,7 @@ iframe{
     width:100%;
     height: auto;
     border:0 2em;
+    margin: auto;
 }
 /*icono mail*/
 .fa-at{
@@ -419,7 +434,9 @@ iframe{
     border: solid;
   }
 
-  /*animacion*/
+/********************/
+/*Efectos animacion */
+/********************/
      
   @keyframes example {
     from {transform: rotate(-90deg); font-size: 1em;}
