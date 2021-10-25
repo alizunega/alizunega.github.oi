@@ -1,8 +1,33 @@
+var nombre = document.getElementById(nombre).value;
+var mail = document.getElementById(email).value;
+var phone = document.getElementById(phone).value;
+
+function validarFormulario(evento){
+  var expr = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+  if ( !expr.test(mail) ){                                                           
+    alert("Error: La dirección de correo " + correo + " es incorrecta.");
+    return false;
+  }
+  
+  if(( nombre.lenght== 0 ) || (mail.lenght == 0) || ( phone == null)){
+    
+    alert("Este campo es obligatorio.");
+    return false;
+
+  }else{
+    formulario.submi();
+    return true;
+  }  
+
+}
+
+
+
 function comprueba_extension(formulario, archivo) {
   extensiones_validas = new Array(".jpg", ".jpeg", ".png", ".svg");
   msjerror = "";
   if (!archivo) {
-     //Si no tengo archivo, es porque no se selecciono uno y muestro mensaje
+     //muestra mensaje si no se seleccionó algun archivo
       msjerror = "No has seleccionado ningún archivo";
   }else{
      //recupero la extensión de este nombre de archivo
@@ -36,4 +61,8 @@ function comprueba_extension(formulario, archivo) {
   alert (msjerror);
   return 0;
 }
+
+
+
+
   

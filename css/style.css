@@ -19,27 +19,64 @@ body {
 /************************************/
 
 @media screen and (max-width:600px) {
-.navbar{
-    width: 50%;
-    height: 3em;
-    font-size: 0.8em;
-    justify-content: left;
-}
-header.header{
-    font-size: 0.8em;
-    
-}
-.imagen-grid{
-    width: 80%;
-    margin: auto;
-    opacity: 25%;
-}  
-
+    .container-inicio, .container-productos{
+        display: grid;
         
+
+    nav.navbar{
+        width: 100%;
+        height: 3em;
+        font-size: small;
+        justify-content: space-between;
+    }
+
+    header.header{
+        font-size: 0.8em;
+        margin: 0;
+        
+    }
+
+    header.header h1{
+        text-align: center;
+        margin-top: 0.8em;
+    }
+
+    main.item1 {
+        width: 20%;
+        height: 10%;
+        margin: 0.1em 0.1em;
+        
+    }  
+
+    main.item2{
+        display: block;
+        justify-content: left;
+        margin: 0.1em 0.1em;
+        width: 95%;
+        
+    }
+    
+    main.item2 > p{
+        font-size: 0.7em;
+        text-align:justify;
+        
+    }
+    div.image-grid{
+        justify-items: center;
+        margin-left: 20%;
+    }
+    main.grid-item1{
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        margin-left: 0.5em 0.5em;
+    }
+
+           
 }
 /* Segundo Punto de quiebre */
 @media screen and (max-width:788px) {
-    
+
 
 }
 /************************************/
@@ -57,8 +94,9 @@ h1{
 h3{
     font-family: 'Dancing Script', cursive;
     text-align: center;
-    font-size: 2em;
-    color: rgba(236, 157, 54, 0.95);
+    font-size: 2.5em;
+    color: rgba(233, 147, 34, 0.95);
+    text-shadow: 2px 1px 3px saddlebrown;
 }
 
 /*barras de navegacion*/
@@ -269,23 +307,28 @@ legend{
 
 label{
     display: inline-block;
-    margin: 0.5em;
-}
-input, select{
-    height: 2.5em;
-    width: 10em;
+    margin: 1em 0em;
 }
 
 textarea{
-    width: 20em;
+    width: 80%;
     height: 10em;
 }
-.botones{
-    display: inline-flex;
-    justify-self: center;
+.botones > input{
+    font-size: 1.2em;
+    width: 20%;
+    background-color: grey;
+    border-radius: 0.3em;
+    margin: auto;
+}
+
+div.botones{
+    display: flexbox;
+    width: 70%;
     
-    margin: 0 1vh;
-    margin-bottom: 1em;
+    justify-items: center;
+   
+    
     
 }
 
@@ -394,14 +437,17 @@ iframe{
 .fa-at{
     color: rgb(101, 24, 243);
     font-size: 1.5em;
-    animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: 3;
+    animation-name: agrandar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 /*icono whatsapp*/
 .fa-whatsapp-square{
     color: rgb(59, 146, 59);
     font-size: 1.5em;
+    animation-name: agrandar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
     
 }
 /*contacto telef y mail*/
@@ -434,11 +480,11 @@ iframe{
     border: solid;
   }
 
-/********************/
-/*Efectos animacion */
-/********************/
+/***********************************************/
+/*Efecto animacion en página Donde encontrarnos*/
+/***********************************************/
      
-  @keyframes example {
-    from {transform: rotate(-90deg); font-size: 1em;}
-    to {transform: rotate(360deg)}
-  }
+@keyframes agrandar {
+    0% {transform: scale(.75,.75)}
+    50% {transform: scale(1,1)}
+}

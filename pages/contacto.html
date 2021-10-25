@@ -18,7 +18,7 @@
   <div class="container-contacto">
     <nav class="navbar">
       <a href="/index.html">Inicio</a>
-      <a href="/pages/servicios.html">Productos y Servicios</a>
+      <a href="/pages/servicios.html">Productos</a>
       <a href="/pages/establecimientos.html">Donde encontrarnos</a>
       <a href="/pages/contacto.html">Contactanos</a>
       <a href="/pages/ingreso.html"><i class="fas fa-user">Ingreso</i></a>
@@ -29,28 +29,26 @@
       <h1>Panificados ViLu</h1>
     </header>
 
-    <form class="form-contacto" action="/pages/show_data.html" method="get" target="_blank">
+    <form class="form-contacto" action="/pages/show_data.html" method="get" target="_blank" onsubmit="return validarFormulario()  && comprueba_extension()">
       <fieldset>
         <legend>Tus datos de contacto: </legend>
 
-        <input type="text" name="name" placeholder="Nombre" required>
-
-        <input type="text" name="lastname" placeholder="Apellido" required> <br>
+        <input type="text" name="firstname" id="nombre" placeholder="Nombre" required>
+        <input type="text" name="lastname" id="apellido" placeholder="Apellido" > <br>
         <label for="phone">Teléfono: </label>
-        <input type="tel" name="phone" placeholder="0261-1234567" required>
+        <input type="tel" name="phone" id="phone" placeholder="0261-1234567" required>
 
-        <label for="compa">Selecciona tu compañía: </label>
+        <label for="compania">Selecciona tu compañía: </label>
 
         <select id="compania">
           <option value="Movistar" selected>Movistar</option>
           <option value="Personal">Personal</option>
           <option value="Claro">Claro</option>
           <option value="Tuenti">Tuenti</option>
-
         </select>
         <br>
         <label for="email">Email: </label>
-        <input type="email" name="email" placeholder="ejemplo@mail.com">
+        <input type="email" name="email" id="email" placeholder="ejemplo@mail.com" required>
       </fieldset>
 
       <fieldset>
@@ -59,13 +57,13 @@
         <textarea placeholder="Escribe aquí tu comentario..."></textarea>
         <br>
         <label for="file">Agrega tu imagen de ejemplo aquí: </label>
-        <input type="file" name="archivo" id="archivo">
+        <input type="file" value="" name="archivo" >
         <br><small style="color: rgb(226, 63, 63); ">Archivos válidos: jpg, jpeg, png, svg </small>
 
         <br>
       </fieldset>
       <div class="botones">
-        <input type="submit" value="Enviar" onclick="comprueba_extension(this.form, this.form.archivo.value)">
+        <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">
       </div>
     </form>
