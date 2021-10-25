@@ -22,12 +22,12 @@ body {
     .container-inicio, .container-productos{
         display: grid;
         
-
+    }
     nav.navbar{
         width: 100%;
         height: 3em;
-        font-size: small;
-        justify-content: space-between;
+        font-size : small;
+        justify-content : space-between;
     }
 
     header.header{

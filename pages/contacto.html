@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="/js/app.js"></script>
+
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -29,14 +29,15 @@
       <h1>Panificados ViLu</h1>
     </header>
 
-    <form class="form-contacto" action="/pages/show_data.html" method="get" target="_blank" onsubmit="return validarFormulario()  && comprueba_extension()">
+    <form class="form-contacto" action="/pages/show_data.html" method="get" target="_blank"
+      onsubmit="return validarCampos(this.form, this.archivo.value)">
       <fieldset>
         <legend>Tus datos de contacto: </legend>
 
-        <input type="text" name="firstname" id="nombre" placeholder="Nombre" required>
-        <input type="text" name="lastname" id="apellido" placeholder="Apellido" > <br>
+        <input type="text" name="firstname" id="nombre" placeholder="Nombre">
+        <input type="text" name="lastname" id="apellido" placeholder="Apellido"> <br>
         <label for="phone">Teléfono: </label>
-        <input type="tel" name="phone" id="phone" placeholder="0261-1234567" required>
+        <input type="tel" name="phone" id="phone" placeholder="0261-1234567">
 
         <label for="compania">Selecciona tu compañía: </label>
 
@@ -48,16 +49,16 @@
         </select>
         <br>
         <label for="email">Email: </label>
-        <input type="email" name="email" id="email" placeholder="ejemplo@mail.com" required>
+        <input type="email" name="email" id="email" placeholder="ejemplo@mail.com" >
       </fieldset>
 
       <fieldset>
         <legend>Tu comentario e imagen: </legend>
-        
+
         <textarea placeholder="Escribe aquí tu comentario..."></textarea>
         <br>
         <label for="file">Agrega tu imagen de ejemplo aquí: </label>
-        <input type="file" value="" name="archivo" >
+        <input type="file" value="" name="archivo">
         <br><small style="color: rgb(226, 63, 63); ">Archivos válidos: jpg, jpeg, png, svg </small>
 
         <br>
@@ -76,7 +77,7 @@
     </footer>
   </div>
 
-  
+  <script src="/js/app.js"></script>
 </body>
 
 
