@@ -17,14 +17,15 @@
 <body>
   <div class="container-contacto">
     <nav class="navbar">
-      <a href="/index.html">Inicio</a>
-      <a href="/pages/servicios.html">Productos</a>
-      <a href="/pages/establecimientos.html">Donde encontrarnos</a>
-      <a href="/pages/contacto.html">Contactanos</a>
-      <a href="/pages/ingreso.html"><i class="fas fa-user">Ingreso</i></a>
-      <a href="/pages/registro.html"><i class="fas fa-user-plus">Registro</i></a>
+      <a href="/index.html"><i class="fas fa-home"></i>Inicio</a>
+      <a href="/pages/servicios.html"><i class="fas fa-store"></i>Productos</a>
+      <a href="/pages/establecimientos.html"><i class="fas fa-map-marker-alt"></i>Donde encontrarnos</a>
+      <a href="/pages/contacto.html"><i class="fas fa-envelope"></i>Contactanos</a>
+      <!--links de ingreso y registro en nav  -->
+      <a href="/pages/ingreso.html"><i class="fas fa-sign-in-alt"> Ingreso</i></a>
+      <a href="/pages/registro.html"><i class="fas fa-user-plus"> Registro</i></a>
 
-    </nav>
+  </nav>
     <header class="header">
       <h1>Panificados ViLu</h1>
     </header>
@@ -34,10 +35,10 @@
       <fieldset>
         <legend>Tus datos de contacto: </legend>
 
-        <input type="text" name="firstname" id="nombre" placeholder="Nombre">
+        <input type="text" name="firstname" id="nombre" placeholder="Nombre"><span style="color: red;margin-left: 1.5px;font-weight: bolder;">*</span>
         <input type="text" name="lastname" id="apellido" placeholder="Apellido"> <br>
         <label for="phone">Teléfono: </label>
-        <input type="tel" name="phone" id="phone" placeholder="0261-1234567">
+        <input type="tel" name="phone" id="phone" placeholder="0261-1234567"><span style="color: red;margin-left: 1.5px;font-weight: bolder;">*</span>
 
         <label for="compania">Selecciona tu compañía: </label>
 
@@ -49,7 +50,7 @@
         </select>
         <br>
         <label for="email">Email: </label>
-        <input type="email" name="email" id="email" placeholder="ejemplo@mail.com" >
+        <input type="email" name="email" id="email" placeholder="ejemplo@mail.com" ><span style="color: red;margin-left: 1.5px;font-weight: bolder;">*</span>
       </fieldset>
 
       <fieldset>

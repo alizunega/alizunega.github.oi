@@ -138,6 +138,11 @@ h3{
     
 }
 
+a > i.fas{
+    padding-right: 0.5em ;
+    margin-right: 0.5em;
+}
+
 /**********************/ 
 /* grid pagina inicio */
 /**********************/
@@ -368,7 +373,7 @@ li{
     
 
 /* ingreso y registro en nav */
-.fa-user,.fa-user-plus{
+.fa-sign-in-alt,.fa-user-plus{
     color: gray;
     padding: 0.5em;
     margin: 0.1em 0.5em;
@@ -466,13 +471,13 @@ iframe{
 /********************/
 /*Efectos transicion*/
 /********************/
-.fa-user, .fa-user-plus {
+.fa-sign-in-alt, .fa-user-plus {
     transition:  font-size 0.2s, color 0.2s;
     transition-timing-function: ease-out;
     
   }
   
- .fa-user:hover,.fa-user-plus:hover{
+ .fa-sign-in-alt:hover,.fa-user-plus:hover{
     color: white;
     background-color: rgb(91, 63, 168);
     font-size: 0.8em;
