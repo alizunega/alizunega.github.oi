@@ -19,42 +19,32 @@ body {
 /************************************/
 
 @media screen and (max-width:600px) {
-    .container-inicio, .container-productos{
-        display: grid;
-        
-    }
-
+   
     div.lista_oculta{
-        
         visibility: visible;
-        display: inline-block;
-        align-self: space-between;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         position: fixed;
         background-color: black;
         color: white;
         width: 100%;
-       
-        
+            
     }
 
     .lista_oculta ul > li{
-        display: inline;
         margin: 0;
         list-style: none;
-        font-size:1.5vh;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+        font-size: 2.5vw;
+        padding: 0 0.3em;
     }
     ul li > a{
-        width: 2;
+        width: auto;
         padding: 0.5em;
 
     }
-    .fa-sign-in-alt, .fa-user-plus{
-        transition: none;
-    }
-   
-
+    
     ul li>a:hover {
         background-color: grey;
         color:white;
@@ -67,25 +57,24 @@ body {
        visibility: collapse;
        /*margin-top: -999;*/
        
-     }
-
-    header.header{
-        font-size: 70%;
-        display: inline;
-        margin: 1em 0;
-        position: relative;
-        align-self: left;
     }
 
-     h1{
+    header.header, .header{
         display: flex;
-        text-align: left;
-        padding-right: 5em;
-        margin-top: 0.8em;
+        flex-wrap: nowrap ;
+        
+        margin: 1em;
+        padding: 0.8em;
+        align-self: center;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 0.8em;
     }
 
     main.item1 {
-        width: 20%;
+        width: 100%;
         height: 10%;
         margin: 0.1em 0.1em;
         
@@ -114,18 +103,37 @@ body {
         text-align: justify;
         margin-left: 0.5em 0.5em;
     }
+    fieldset{
+        width: 60%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        
+    }
+
 
            
 }
 /* Segundo Punto de quiebre */
 @media screen and (max-width:788px) {
-h1{
+    nav.navbar{
+        font-size: 0.9em;
+    }
+    header.header{
+        padding-top: 0em;
+        margin-top: 0;
+    }
+    header  h1{
     display: flex;
     flex-wrap: nowrap;
     text-align: center;
-
     justify-self: center;
-}
+    font-size: 3em;
+    }
+    fieldset{
+        width: 60%;
+        margin-bottom:0;
+        
+    }
 
 }
 /************************************/
@@ -351,15 +359,14 @@ form.form-contacto{
     justify-content: center;
     align-items: center;
     display: block;
-    margin-left: 20%;
+    margin-left: 10%;
     font-weight: 500;
     color: #333;
-    
-    
 }
+
 fieldset{
-    width: 70%;
-    margin-bottom: 5em;
+    width: 60%;
+    margin-bottom: 2em;
     
 }
 
@@ -378,15 +385,15 @@ textarea{
 }
 .botones > input{
     font-size: 1.2em;
-    width: 20%;
+    width: 100%;
     background-color: grey;
     border-radius: 0.3em;
-    margin: auto;
+    margin: 1em;
 }
 
 div.botones{
-    display: flexbox;
-    width: 70%;
+    display: inline-flex;
+    width: 30%;
     justify-items: center;
 }
 
