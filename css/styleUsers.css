@@ -84,6 +84,7 @@ form{
 	padding-top: 2em;
 	font-size: 1em;
 	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 .card-title{ font-weight:400; }
@@ -117,25 +118,27 @@ form{
 
 .footer{
 	background-color: black;
-	position: fixed;
-
+	position: sticky;
+	display: flex;
+	height: 3rem;
 	width: 100%;
 	justify-content: center;
 	text-align: center;
 	color: white;
 	font-weight: bold;
 	align-items: center;
-	margin: 2rem 0 0 0;
-	padding: 1rem 0 0 0; 
+	margin: auto 0 0 0;
+	padding: auto 0 0 0; 
 }
 
 .footer > a{
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
+	margin-left: 1rem;
 }
 
 footer > a:hover{
-    background-color: rgb(136, 134, 132);
-	padding: auto;
+    background-color: rgb(49, 48, 48);
+	
 
 } 
 .fa-instagram-square{
@@ -148,5 +151,6 @@ footer > a:hover{
 .fa-facebook{
     color: rgb(49, 49, 136);
     font-size: 0.8em;
-    margin: auto auto;
+    margin: auto;
+
 }
